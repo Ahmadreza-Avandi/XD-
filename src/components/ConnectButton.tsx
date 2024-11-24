@@ -11,24 +11,33 @@ export function ConnectButton() {
   const [walletConnected, setWalletConnected] = useState(false);
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
 
-  // هندل کردن اتصال به ولت
+  // بررسی اتصال قبلی هنگام لود شدن کامپوننت
+  useEffect(() => {
+    const checkConnection = async () => {
+      const account = tonConnect.account;
+      if (account) {
+        setWalletAddress(account.address);
+        setWalletConnected(true);
+      }
+    };
+    checkConnection();
+  }, []);
+
   const handleConnect = async () => {
     setIsConnecting(true);
 
     try {
-      // باز کردن صفحه کانکت شدن به ولت
-      const wallets = await tonConnect.getWallets();
+      // استفاده از متد connect
+      await tonConnect.connect({
+        universalLink: 'https://app.tonkeeper.com/ton-connect',
+        bridgeUrl: 'https://bridge.tonapi.io/bridge',
+      });
 
-      if (wallets.length > 0) {
-        const wallet = wallets[0]; // فرض می‌کنیم اولین ولت را استفاده می‌کنید
-        await tonConnect.connect(wallet.bridgeUrl);
-
-        // آدرس ولت را دریافت کنید
-        const session = tonConnect.account;
-        if (session) {
-          setWalletAddress(session.address);
-          setWalletConnected(true);
-        }
+      // دریافت اطلاعات حساب کاربری
+      const account = tonConnect.account;
+      if (account) {
+        setWalletAddress(account.address);
+        setWalletConnected(true);
       }
     } catch (error) {
       console.error('Error connecting to wallet:', error);
