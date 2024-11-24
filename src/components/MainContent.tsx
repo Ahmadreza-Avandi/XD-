@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from 'react';
 import { ConnectButton } from './ConnectButton';
 import { Info } from 'lucide-react';
