@@ -1,34 +1,35 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "vite",                // دستور برای اجرای توسعه
+    "build": "vite build",        // دستور برای ساخت پروژه
+    "lint": "eslint .",           // دستور برای اجرای ESLint
+    "preview": "vite preview"    // دستور برای پیش‌نمایش پروژه
   },
   "dependencies": {
-    "@tonconnect/sdk": "^3.0.5",
-    "lucide-react": "^0.344.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@tonconnect/sdk": "^3.0.5",  // SDK مربوط به اتصال به TON
+    "lucide-react": "^0.344.0",    // آیکن‌های react
+    "react": "^18.3.1",            // React نسخه 18
+    "react-dom": "^18.3.1"        // ReactDOM نسخه 18
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.1",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.18",
-    "eslint": "^9.9.1",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.11",
-    "globals": "^15.9.0",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.3.0",
-    "vite": "^5.4.2"
+    "@eslint/js": "^9.9.1",         // پشتیبانی از ESLint
+    "@types/react": "^18.3.5",      // تایپ‌های TypeScript برای React
+    "@types/react-dom": "^18.3.0",  // تایپ‌های TypeScript برای ReactDOM
+    "@vitejs/plugin-react": "^4.3.1",  // افزونه React برای Vite
+    "autoprefixer": "^10.4.18",     // تنظیمات برای اتوماتیک کردن پیش‌وندها
+    "eslint": "^9.9.1",             // ابزار بررسی کد
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0", // پلاگین ESLint برای React hooks
+    "eslint-plugin-react-refresh": "^0.4.11", // پلاگین ESLint برای React refresh
+    "globals": "^15.9.0",           // برای تعریف متغیرهای عمومی
+    "postcss": "^8.4.35",           // ابزار پردازش CSS
+    "tailwindcss": "^3.4.1",        // ابزار CSS utility-first
+    "typescript": "^5.5.3",         // تایپ‌اسکریپت
+    "typescript-eslint": "^8.3.0",  // ESLint پشتیبانی TypeScript
+    "vite": "^5.4.2"                // Vite برای پروژه
   }
 }
+
