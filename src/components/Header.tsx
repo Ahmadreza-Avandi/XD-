@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Wallet } from 'lucide-react';
 
@@ -12,7 +13,7 @@ export function Header() {
           </div>
           <div className="flex items-center space-x-4">
             <span className="text-sm px-3 py-1 rounded-full bg-[#0098EA]/10 text-[#0098EA] border border-[#0098EA]/20">
-              Mainnet
+              TON
             </span>
           </div>
         </div>
